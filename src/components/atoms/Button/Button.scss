@@ -1,0 +1,45 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+
+.button{
+	padding: toRem(8) toRem(16);
+	border-radius: toRem(8);
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-family: $primary-font;
+	font-size: toRem(16);
+	line-height: toRem(22);
+	background-color: transparent;
+
+	&--primary{
+		background-color: $yellow600;
+		color: $gray900;
+        display: flex;
+        align-items: center;
+		justify-content: center;
+		&:hover{
+			background-color: $yellow;
+		}
+        svg{
+			width: toRem(18);
+            height: toRem(18);
+			margin-right: toRem(10);
+		}
+	}
+
+	&--icon{
+		padding: toRem(8);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $gray100;
+		svg{
+			width: toRem(24);
+            height: toRem(24);
+		}
+		&:hover{
+			color: $yellow600;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+//Font
+$primary-font: 'Lato', sans-serif;
+
+//Colors
+$black: #000000;
+$gray900: #212121;
+$gray100: #F5F5F5;
+$gray100opacity60: rgba(245, 245, 245, 0.6);
+$gray100opacity36: rgba(245, 245, 245, 0.36);
+$gray100opacity16: rgba(245, 245, 245, 0.16);
+$yellow600: rgba(253, 216, 53, 1);
+$yellow: #FFEB3B;
+$yellowGradient: linear-gradient(130deg, #FFEE58 0%, #FF8F00 104.33%);
+
+// Screen sizes
+$screen-sm: toRem(576);
+$screen-md: toRem(768);
+$screen-lg: toRem(992);
+$screen-xl: toRem(1280);
+$screen-xxl: toRem(1300);
+$screen-full: toRem(1400);
+
+
