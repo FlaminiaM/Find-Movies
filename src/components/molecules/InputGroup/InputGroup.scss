@@ -1,0 +1,16 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+
+    &__label-container{
+        display: flex;
+        justify-content: space-between;
+        
+        label{
+            margin-bottom: toRem(5);
+        }
+    }
+}
