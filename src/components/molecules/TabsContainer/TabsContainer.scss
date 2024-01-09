@@ -1,0 +1,24 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: toRem(16);
+    @include mdMinBreakPoint{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.tabs-container{
+    margin: toRem(30) 0;
+
+    &__show-completed{
+        .button:hover{
+            background-color: transparent;
+        }
+    }
+}

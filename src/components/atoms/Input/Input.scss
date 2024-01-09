@@ -1,0 +1,22 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+
+.input{
+    padding: toRem(12);
+    border-radius: toRem(4);
+    border: toRem(1) solid $gray100;
+    background-color: $gray100;
+    font-family: $primary-font;
+    font-size: toRem(16);
+
+    &:focus{
+        border: toRem(1) solid $yellow600; 
+        outline: toRem(1) solid $yellow600; 
+    }
+
+    &--with-icon{
+        background-repeat: no-repeat;
+        background-position: toRem(10);
+        padding-left: toRem(40);
+    }
+}

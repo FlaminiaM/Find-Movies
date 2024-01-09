@@ -1,0 +1,18 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+
+.rating{
+    display: flex;
+    align-items: center;
+    color: $gray100;
+    font-size: toRem(17);
+    line-height: toRem(27);
+    padding: toRem(8);
+    background-color: $black;
+    
+    img{
+        margin-right: toRem(5);
+    }
+
+    
+}
