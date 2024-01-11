@@ -10,7 +10,7 @@ import TabsContainer from './components/molecules/TabsContainer/TabsContainer';
 import Rating from './components/atoms/Rating/Rating';
 import Loader from './components/atoms/Loader/Loader';
 import Swiper from './components/organisms/Swiper/Swiper';
-
+import Movies from './components/organisms/Movies/Movies';
 
 function App() {
   return (
@@ -22,11 +22,11 @@ function App() {
       <Button buttonType="icon" icon={<Icon name="play" />} /> */}
       <TabsContainer />
       {/* <Rating rating='3.5' /> */}
-      <Swiper />
+      {/* <Swiper /> */}
+      {/* <Loader /> */}
+      <Movies />
 
-      <Loader />
     </div>
   );
 }
-
 export default App;
