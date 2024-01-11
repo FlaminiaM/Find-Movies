@@ -20,10 +20,13 @@ export const moviesApi = createApi({
         }),
         getUpcomingMovies: builder.query({
             query: () => `/movie/top_rated`,
+        }),
+        searchMulti: builder.query({
+            query: (searchText) => `/search/multi?query=${searchText}&page=1&language=en-US`
         })
     }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetTopRatedMoviesQuery } = moviesApi
+export const { useGetTopRatedMoviesQuery, useGetUpcomingMoviesQuery, useSearchMultiQuery } = moviesApi
