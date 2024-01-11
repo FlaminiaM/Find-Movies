@@ -7,7 +7,7 @@ import movieImage from '../../../assets/images/movie-image.png'
 import MoviePreview from '../../molecules/MoviePreview/MoviePreview';
 import Icon from '../../atoms/Icon/Icon';
 
-function Swiper({ }) {
+function Swiper({ moviesData }) {
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -20,13 +20,21 @@ function Swiper({ }) {
             navigation: true,
             breakpoints: {
                 0: {
-                    slidesPerView: 1,
+                    slidesPerView: 1.5,
+                },
+
+                660: {
+                    slidesPerView: 3.2,
                 },
                 768: {
-                    slidesPerView: 5,
+                    slidesPerView: 4.2,
                 },
 
                 1020: {
+                    slidesPerView: 5.2,
+                },
+
+                1200: {
                     slidesPerView: 6.2,
                 },
 
@@ -50,18 +58,10 @@ function Swiper({ }) {
             <swiper-container
                 init="false" ref={swiperRef}
             >
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
-                <swiper-slide><MoviePreview image={movieImage} title='Everything Everywhere All at Once' rating='8.0' /></swiper-slide>
+                {
+                    moviesData.map(movie => <swiper-slide key={movie.id}><MoviePreview title={movie.title} rating={movie.vote_average} image={movie.poster_path} /></swiper-slide>)
+                }
+
 
 
             </swiper-container>
