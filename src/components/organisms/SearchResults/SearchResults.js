@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './SearchResults.scss';
 
-import { useSearchMultiQuery } from '../../../api/movies';
+import { useSearchMultiQuery } from '../../../api/api';
 
 import Loader from '../../atoms/Loader/Loader';
 import SearchResult from '../../molecules/SearchResult/SearchResult';

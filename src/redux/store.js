@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { moviesApi } from '../api/movies';
+import { moviesApi } from '../api/api';
 
 import { popupReducer } from "./popupReducers";
 

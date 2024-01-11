@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import './Header.scss';
 
-import { useSearchMultiQuery } from '../../../api/movies';
+import { useSearchMultiQuery } from '../../../api/api';
 // import { debounce } from '../../../helperFunctions/helperFunctions';
 
 import useDebounce from '../../../customHook/useDebounce';
