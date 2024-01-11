@@ -1,6 +1,6 @@
 @import '../../../globalStyles/variables';
 @import '../../../globalStyles/functions';
-
+@import '../../../globalStyles/mixins';
 .swiper{
     &-wrapper{
         position: relative;
@@ -13,7 +13,10 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 1;
-        width: 100vw;
+        width: calc(100vw - 32px);
+        @include mdMinBreakPoint{
+            width: calc(100vw - 140px);
+        }
 
         &__next{
             background-color: $gray100opacity16;
