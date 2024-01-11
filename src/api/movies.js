@@ -1,5 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
+import { api_key } from '../config';
+
 export const moviesApi = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({
@@ -7,7 +9,7 @@ export const moviesApi = createApi({
         prepareHeaders: (headers, { getState }) => {
             headers.set(
                 'Authorization',
-                `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NjAwYzFjYTRlYWI0MzRkZjdmNWRmYTY5M2ZjYWQyMyIsInN1YiI6IjY1OTdlOTQ5NzI2ZmIxMDIwZWFiMjhiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.snbME917q4u2bNVw7w0oHdnyu_KzRW4Y0fdX9lZ-ALk`
+                api_key
             );
             return headers;
         },
@@ -18,10 +20,13 @@ export const moviesApi = createApi({
         }),
         getUpcomingMovies: builder.query({
             query: () => `/movie/top_rated`,
+        }),
+        searchMulti: builder.query({
+            query: (searchText) => `/search/multi?query=${searchText}&page=1&language=en-US`
         })
     }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetTopRatedMoviesQuery } = moviesApi
+export const { useGetTopRatedMoviesQuery, useGetUpcomingMoviesQuery, useSearchMultiQuery } = moviesApi

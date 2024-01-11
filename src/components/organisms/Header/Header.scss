@@ -1,0 +1,33 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: toRem(16);
+
+    @include mdMinBreakPoint{
+        flex-direction: row;
+        padding: toRem(24);
+    }
+   
+    &__search{
+        width: 100%;
+        max-width: toRem(900);
+        margin-top: toRem(16);
+        position: relative;
+
+        @include mdMinBreakPoint{
+            margin-left: toRem(60);
+            margin-top: toRem(0);
+        }
+    }
+
+    input{
+        width: 100%;
+    }
+}

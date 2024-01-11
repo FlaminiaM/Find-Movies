@@ -11,10 +11,12 @@ import Rating from './components/atoms/Rating/Rating';
 import Loader from './components/atoms/Loader/Loader';
 import Swiper from './components/organisms/Swiper/Swiper';
 import Movies from './components/organisms/Movies/Movies';
+import Header from './components/organisms/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       {/* <Icon name="search" />
       <Icon name="play" color='' />
       <Icon name="star" />

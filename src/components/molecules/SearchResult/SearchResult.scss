@@ -1,0 +1,35 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.search-result{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: toRem(12);
+    cursor: pointer;
+
+    &:hover{
+        background-color: $whiteopacity12;
+    }
+
+    &__image{
+        max-width: toRem(55);
+        margin-right: toRem(20);
+        img{
+            width: 100%;
+        }
+    }
+
+    &-details{
+        &__title{
+            font-size: toRem(20);
+        }
+
+        &__year{
+            margin-top: toRem(8);
+            margin-bottom: toRem(8);
+            color: $gray100opacity60;
+        }
+    }
+}
