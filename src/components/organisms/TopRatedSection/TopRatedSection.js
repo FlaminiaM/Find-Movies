@@ -8,7 +8,7 @@ function TopRatedSection() {
     return (
         <div className="top-rated-section">
             <h1>Top Rated</h1>
-            <TabsContainer movieApiQuery={useGetTopRatedMoviesQuery} tvApiQuery={useGetTopRatedTvQuery} />
+            <TabsContainer name='top-rated' movieApiQuery={useGetTopRatedMoviesQuery} tvApiQuery={useGetTopRatedTvQuery} />
         </div>
     );
 }

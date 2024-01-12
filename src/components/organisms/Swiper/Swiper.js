@@ -7,7 +7,7 @@ import movieImage from '../../../assets/images/movie-image.png'
 import MoviePreview from '../../molecules/MoviePreview/MoviePreview';
 import Icon from '../../atoms/Icon/Icon';
 
-function Swiper({ moviesData }) {
+function Swiper({ moviesData, name }) {
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -40,8 +40,8 @@ function Swiper({ moviesData }) {
 
             },
             navigation: {
-                nextEl: ".swiper-navigation__next",
-                prevEl: ".swiper-navigation__prev"
+                nextEl: `#swiper-${name} .swiper-navigation__next`,
+                prevEl: `#swiper-${name} .swiper-navigation__prev`,
             }
         };
 
@@ -54,7 +54,7 @@ function Swiper({ moviesData }) {
 
 
     return (
-        <div className='swiper-wrapper'>
+        <div className='swiper-wrapper' id={`swiper-${name}`}>
             <swiper-container
                 init="false" ref={swiperRef}
             >
