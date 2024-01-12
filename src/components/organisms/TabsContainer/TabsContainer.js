@@ -33,7 +33,7 @@ function TabsContainer({ name, movieApiQuery, tvApiQuery }) {
             <div className='tabs'>
                 {tabs.map((tab, i) => <Tab key={i} tabIndex={i} {...tab} selected={i === indexSelectedTab} handleTabClick={handleTabClick} value={tab.value} displayValue={tab.displayValue} />)}
             </div>
-            <TabContent name={`${name}-${selectedTab}`} apiQuery={selectedTab === "movies" ? movieApiQuery : tvApiQuery} />
+            <TabContent type={selectedTab} name={`${name}-${selectedTab}`} apiQuery={selectedTab === "movies" ? movieApiQuery : tvApiQuery} />
         </div>
     )
 }

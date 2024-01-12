@@ -1,4 +1,6 @@
-@import './variables';
+// @import './variables';
+// // @import './mixins';
+// // @import './functions';
 
 body.no-scroll{
 	overflow: hidden;
@@ -49,4 +51,15 @@ table {
 
 *, *::before, *::after {
 	box-sizing: border-box;
+}
+
+
+.container{
+	padding-left: toRem(16);
+	padding-right: toRem(16);
+	
+	@include mdMinBreakPoint{
+		padding-left: toRem(120);
+		padding-right: toRem(120);
+	}
 }

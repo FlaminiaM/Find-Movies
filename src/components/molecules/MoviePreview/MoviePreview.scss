@@ -6,6 +6,8 @@
     max-width: 171px;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
+    color: $white;
 
     &__poster{
         height: toRem(258);
@@ -44,5 +46,6 @@
     &__title{
         line-height: toRem(22);
         margin-top: toRem(8);
+        color: $white;
     }
 }

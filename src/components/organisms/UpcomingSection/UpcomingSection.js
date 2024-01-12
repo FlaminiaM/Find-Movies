@@ -7,8 +7,8 @@ import TabContent from '../TabContent/TabContent';
 function UpcomingSection() {
     return (
         <div className="upcoming-section">
-            <h1>Upcoming</h1>
-            <TabContent name="upcoming" apiQuery={useGetUpcomingMoviesQuery} />
+            <h1>Upcoming Movies</h1>
+            <TabContent type='movies' name="upcoming" apiQuery={useGetUpcomingMoviesQuery} />
         </div>
     );
 }

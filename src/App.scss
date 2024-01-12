@@ -1,9 +1,5 @@
 @import './globalStyles/global.scss';
 
 .App{
-    padding-left: toRem(16);
 
-    @include mdMinBreakPoint{
-        padding-left: toRem(120);
-    }
 }

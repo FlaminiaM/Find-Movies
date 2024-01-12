@@ -1,0 +1,8 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.genres-list{
+    display: flex;
+    margin: toRem(24) 0;
+}

@@ -7,7 +7,7 @@ import movieImage from '../../../assets/images/movie-image.png'
 import MoviePreview from '../../molecules/MoviePreview/MoviePreview';
 import Icon from '../../atoms/Icon/Icon';
 
-function Swiper({ moviesData, name }) {
+function Swiper({ moviesData, name, type }) {
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -59,16 +59,18 @@ function Swiper({ moviesData, name }) {
                 init="false" ref={swiperRef}
             >
                 {
-                    moviesData.map(movie => <swiper-slide key={movie.id}><MoviePreview title={movie.title} rating={movie.vote_average} image={movie.poster_path} /></swiper-slide>)
+                    moviesData.map(movie => <swiper-slide key={movie.id}><MoviePreview type={type} id={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} /></swiper-slide>)
                 }
 
 
 
             </swiper-container>
-            <div className='swiper-navigation'>
-                <div className='swiper-navigation__prev'><Icon name='play' height={40} width={40} viewbox="0 0 24 24" /></div>
-                <div className='swiper-navigation__next'><Icon name='play' height={40} width={40} viewbox="0 0 24 24" /></div>
-            </div>
+            {/* <div className='swiper-navigation'>
+            </div> */}
+
+            <div className='swiper-navigation swiper-navigation__prev'><Icon name='play' height={40} width={40} viewbox="0 0 24 24" /></div>
+            <div className='swiper-navigation swiper-navigation__next'><Icon name='play' height={40} width={40} viewbox="0 0 24 24" /></div>
+
 
 
         </div>
