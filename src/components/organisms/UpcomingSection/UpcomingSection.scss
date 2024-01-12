@@ -2,14 +2,11 @@
 @import '../../../globalStyles/functions';
 @import '../../../globalStyles/mixins';
 
-.top-rated-section{
-    margin-top: toRem(32);
-
-    @include mdMinBreakPoint{
-        margin-top: toRem(100);
-    }
+.upcoming-section{
+    margin-top: toRem(100);
     h1{
         color: $yellow;
         font-size: toRem(32);
+        margin-bottom: toRem(32);
     }
 }

@@ -6,11 +6,10 @@
 .tab{
     color: $gray100opacity60;
     font-size: toRem(16);
-    padding: toRem(10);
+    padding: toRem(16);
     background-color: transparent;
     cursor: pointer;
     display: inline-block;
-    padding-bottom: 0;
     position: relative;
 
     @include mdMinBreakPoint{

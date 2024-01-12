@@ -19,7 +19,7 @@ export const moviesApi = createApi({
             query: () => `/movie/top_rated?language=en-US`,
         }),
         getUpcomingMovies: builder.query({
-            query: () => `/movie/top_rated?language=en-US`,
+            query: () => `/movie/upcoming?language=en-US`,
         }),
         searchMulti: builder.query({
             query: (searchText) => `/search/multi?query=${searchText}&page=1&language=en-US`

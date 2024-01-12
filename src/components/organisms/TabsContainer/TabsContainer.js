@@ -4,7 +4,7 @@ import './TabsContainer.scss';
 import Tab from '../../atoms/Tab/Tab';
 import TabContent from '../TabContent/TabContent';
 
-function TabsContainer({ movieApiQuery, tvApiQuery }) {
+function TabsContainer({ name, movieApiQuery, tvApiQuery }) {
     const tabs = [
         {
             displayValue: 'movies',
@@ -33,7 +33,7 @@ function TabsContainer({ movieApiQuery, tvApiQuery }) {
             <div className='tabs'>
                 {tabs.map((tab, i) => <Tab key={i} tabIndex={i} {...tab} selected={i === indexSelectedTab} handleTabClick={handleTabClick} value={tab.value} displayValue={tab.displayValue} />)}
             </div>
-            <TabContent apiQuery={selectedTab === "movies" ? movieApiQuery : tvApiQuery} />
+            <TabContent name={`${name}-${selectedTab}`} apiQuery={selectedTab === "movies" ? movieApiQuery : tvApiQuery} />
         </div>
     )
 }
