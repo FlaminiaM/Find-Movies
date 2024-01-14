@@ -8,12 +8,14 @@
     align-items: center;
     // justify-content: center;
     flex-direction: column;
-    padding: toRem(16) toRem(16) toRem(16) toRem(16);
+    padding-top: toRem(16);
+    padding-bottom: toRem(16);
 
 
     @include mdMinBreakPoint{
         flex-direction: row;
-        padding: toRem(24) toRem(24) toRem(24) toRem(120);
+        padding-top: toRem(24);
+        padding-bottom: toRem(24);
     }
    
     &__search{

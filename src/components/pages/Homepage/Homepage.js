@@ -5,7 +5,7 @@ import './Homepage.scss';
 
 function Homepage() {
     return (
-        <div className='homepage container'>
+        <div className='homepage'>
             <TopRatedSection />
             <UpcomingSection />
         </div>

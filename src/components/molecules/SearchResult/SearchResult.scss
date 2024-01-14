@@ -8,6 +8,8 @@
     align-items: center;
     padding: toRem(12);
     cursor: pointer;
+    text-decoration: none;
+    color: $white;
 
     &:hover{
         background-color: $whiteopacity12;

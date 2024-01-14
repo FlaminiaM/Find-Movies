@@ -10,30 +10,42 @@
     align-items: center;
 
     &-inner{
-        // padding-left: toRem(16);
-        // padding-right: toRem(16);
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: space-between;
         width: 100%;
 
-        // @include mdMinBreakPoint{
-        //     padding-left: toRem(120);
-        //     padding-right: toRem(120);
-        // }
+        @include mdMinBreakPoint{
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &__info-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mdMinBreakPoint{
+            align-items: flex-start;
+        }
+
         .type{
             color: $yellow;
         }
     
         h1{
-            font-size: toRem(40);
+            font-size: toRem(24);
             margin: toRem(24) 0;
             letter-spacing: normal;
             word-spacing: 3px;
-            line-height: normal;        
+            line-height: normal;  
+            text-align: center;
+            
+            @include mdMinBreakPoint{
+                font-size: toRem(40);
+                text-align: left;
+            }
         }
         span{
             font-size: toRem(14);
@@ -45,6 +57,14 @@
         &-container{
             display: flex;
             align-items: center;
+            justify-content: center;
+            margin-top: 8px;
+
+            @include mdMinBreakPoint{
+                justify-content: left;
+                margin-top: 0;
+            }
+
         }
 
         &-star, &-tot{
@@ -55,21 +75,38 @@
         &-star{
             margin-right: toRem(20);
             img{
-                height: toRem(48);
+                height: toRem(32);
+                @include mdMinBreakPoint{
+                    height: toRem(48);
+                }
             }
             .rating-average{
-                font-size: toRem(32);
+                font-size: toRem(20);
+
+                @include mdMinBreakPoint{
+                    font-size: toRem(32);
+                }
             }
         }
 
         &-tot{
-            flex-direction: column;
+            flex-direction: row;
             font-size: toRem(13);
             color: $gray100opacity60;
+
+            @include mdMinBreakPoint{
+                flex-direction: column;
+            }
 
             .tot-ratings{
                 margin-top: toRem(4);
                 margin-bottom: toRem(4);
+                margin-right: toRem(4);
+
+                @include mdMinBreakPoint{
+                    margin-bottom: toRem(4);
+                    margin-top: toRem(4);
+                }
             }
         }
     }

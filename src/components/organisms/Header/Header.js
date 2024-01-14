@@ -1,9 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import './Header.scss';
 
-import { useSearchMultiQuery } from '../../../api/api';
-// import { debounce } from '../../../helperFunctions/helperFunctions';
-
 import useDebounce from '../../../customHook/useDebounce';
 
 import Logo from '../../atoms/Logo/Logo';
@@ -16,7 +13,7 @@ function Header({ }) {
     const debouncedSearchTerm = useDebounce(searchText, 500);
 
     return (
-        <div className='header'>
+        <div className='header container'>
             <Logo />
             <div className='header__search'>
                 <Input inputType='text'

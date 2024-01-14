@@ -25,21 +25,21 @@ function SearchResults({ searchTerm, maxResultsNumber }) {
     }, [searchTerm]);
 
 
-    // if (error) {
-    //     return <div className="text-hint">Error while fetching books</div>;
-    // }
+    if (error) {
+        return <div className="text-hint">Error while fetching books</div>;
+    }
 
-    // if (isLoading) {
-    //     return <div className="text-hint">Loading books...</div>;
-    // }
+    if (isLoading) {
+        return <div className="text-hint">Loading books...</div>;
+    }
 
-    // if (isFetching) {
-    //     return <div className="text-hint">Fetching books...</div>;
-    // }
+    if (isFetching) {
+        return <div className="text-hint">Fetching books...</div>;
+    }
 
-    // if (results.length === 0) {
-    //     return <div className="text-hint">No books found</div>;
-    // }
+    if (results.length === 0) {
+        return <div className="text-hint">No books found</div>;
+    }
 
     return (
         <div className={(isLoading || isFetching) ? `search-results search-results--loading` : `search-results`}>
@@ -47,7 +47,7 @@ function SearchResults({ searchTerm, maxResultsNumber }) {
                 ? <Loader />
                 : (error
                     ? <p>There was an error please try again</p>
-                    : results.slice(0, maxResultsNumber).map((result, i) => <SearchResult key={result.id} title={result.media_type === "tv" ? result.name : result.title} posterPath={result.poster_path} firstAirDate={result.media_type === "tv" ? result.first_air_date : result.release_date} mediaType={result.media_type} />))}
+                    : results.slice(0, maxResultsNumber).map((result, i) => <SearchResult key={result.id} id={result.id} title={result.media_type === "tv" ? result.name : result.title} posterPath={result.poster_path} firstAirDate={result.media_type === "tv" ? result.first_air_date : result.release_date} mediaType={result.media_type} />))}
         </div>
     )
 }

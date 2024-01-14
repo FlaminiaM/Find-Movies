@@ -32,8 +32,12 @@ function TvDetails() {
                 rating={data.vote_average}
                 totalNumberRatings={data.vote_count}
             />
+            <div className='tv-details container'>
+                <div>
+                    <div className='tv-details__poster' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${data.poster_path})` }}></div>
+                </div>
+            </div>
             <GenreTagsList genres={data.genres} />
-
         </>
     );
 

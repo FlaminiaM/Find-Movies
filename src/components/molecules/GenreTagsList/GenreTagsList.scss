@@ -5,4 +5,8 @@
 .genres-list{
     display: flex;
     margin: toRem(24) 0;
+    justify-content: center;
+    @include mdMinBreakPoint{
+        justify-content: flex-start;
+    }
 }

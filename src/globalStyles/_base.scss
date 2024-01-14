@@ -57,8 +57,15 @@ table {
 .container{
 	padding-left: toRem(16);
 	padding-right: toRem(16);
+	max-width: 1300px;
+    margin: 0 auto;
 	
 	@include mdMinBreakPoint{
+		padding-left: toRem(80);
+		padding-right: toRem(80);
+	}
+
+	@include xlMinBreakPoint{
 		padding-left: toRem(120);
 		padding-right: toRem(120);
 	}

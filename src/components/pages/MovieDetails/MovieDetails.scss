@@ -2,22 +2,62 @@
 @import '../../../globalStyles/functions';
 @import '../../../globalStyles/mixins';
 
-.movie-details-section{
+.movie-details{
     display: flex;
-    margin-top: toRem(64);
+    flex-direction: column;
+    margin-top: toRem(16);
+    margin-bottom: toRem(16);
+
+    @include mdMinBreakPoint{
+        flex-direction: row;
+        margin-top: toRem(64);
+        margin-bottom: toRem(64);
+    }
+
+    &__label{
+        color: $gray100opacity60;
+        margin-right: toRem(5);
+    }
+    
     &__poster{
-        width: toRem(272);
+        width: 100%;
         height: toRem(420);
+        max-width: toRem(300);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: toRem(8);
         flex-shrink: 0;
+        margin: 0 auto;
+
+        // @include smMinBreakPoint{
+        // }
+
+        @include mdMinBreakPoint{
+            width: toRem(272);
+            height: toRem(420);
+        }
     }
 
     &-info{
         margin-left: toRem(32);
         margin-right: toRem(16);
+        text-align: center;
+        @include mdMinBreakPoint{
+            text-align: left;
+        }
+
+        &-extra {
+            text-align: center;
+            @include mdMinBreakPoint{
+                text-align: left;
+            }
+            p{
+                margin-top: toRem(8);
+                margin-bottom: toRem(8);
+                line-height: toRem(27.2);
+            }
+        }
 
         &__tagline{
             font-style: italic;
@@ -33,18 +73,6 @@
 
         &__description{
             line-height: toRem(27.2);
-        }
-
-        &-cast{
-            p{
-                margin-top: toRem(8);
-                margin-bottom: toRem(8);
-                line-height: toRem(27.2);
-            }
-            &__label{
-                color: $gray100opacity60;
-                margin-right: toRem(5);
-            }
         }
     }
 }

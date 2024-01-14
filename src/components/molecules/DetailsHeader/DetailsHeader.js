@@ -25,8 +25,10 @@ function DetailsHeader({ type, title, releaseDate, length, rating, totalNumberRa
                 <div className='details-header__info-container'>
                     <p className='type'>{type.toUpperCase()}</p>
                     <h1>{title.toUpperCase()}</h1>
-                    <span>{new Date(releaseDate).getFullYear()}</span>
-                    {lengthUi}
+                    <div className='details-header-inner__date-year'>
+                        <span>{new Date(releaseDate).getFullYear()}</span>
+                        {lengthUi}
+                    </div>
                 </div>
                 <div className='details-header__rating-container'>
                     <div className='details-header__rating-star'>
