@@ -2,7 +2,7 @@ import Loader from '../../atoms/Loader/Loader';
 import Swiper from '../Swiper/Swiper';
 
 function TabContent({ type, apiQuery, name }) {
-    const { data, error, isLoading, isFetching, isSuccess } = apiQuery({ refetchOnMountOrArgChange: true, });
+    const { data, error, isLoading, isFetching, isSuccess } = apiQuery(type);
     console.log(data)
     let content;
     if (isLoading) {

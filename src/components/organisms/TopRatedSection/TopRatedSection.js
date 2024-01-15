@@ -1,6 +1,6 @@
 import './TopRatedSection.scss';
 
-import { useGetTopRatedMoviesQuery, useGetTopRatedTvQuery } from '../../../api/api';
+import { useGetTopRatedQuery } from '../../../api/api';
 
 import TabsContainer from '../TabsContainer/TabsContainer';
 
@@ -8,7 +8,7 @@ function TopRatedSection() {
     return (
         <div className="top-rated-section">
             <h1>Top Rated</h1>
-            <TabsContainer name='top-rated' movieApiQuery={useGetTopRatedMoviesQuery} tvApiQuery={useGetTopRatedTvQuery} />
+            <TabsContainer name='top-rated' apiQuery={useGetTopRatedQuery}/>
         </div>
     );
 }

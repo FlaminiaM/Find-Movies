@@ -4,5 +4,9 @@
 
 
 .watch-providers{
-    margin-top: toRem(24)
+    margin-top: toRem(24);
+    text-align: center;
+    @include mdMinBreakPoint{
+        text-align: left;
+    }
 }

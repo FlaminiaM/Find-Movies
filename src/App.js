@@ -4,8 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 import Header from './components/organisms/Header/Header';
 import Homepage from './components/pages/Homepage/Homepage';
-import MovieDetails from './components/pages/MovieDetails/MovieDetails';
-import TvDetails from './components/pages/TvDetails/TvDetails'
+import DetailsPage from './components/pages/DetailsPage/DetailsPage';
 
 function App() {
   return (
@@ -13,8 +12,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/movies/:movieId" element={<MovieDetails />} />
-        <Route path="/series/:tvId" element={<TvDetails />} />
+        <Route path="/movies/:id" element={<DetailsPage type='movie' />} />
+        <Route path="/series/:id" element={<DetailsPage type='tv' />}  />
       </Routes>
     </div>
   )

@@ -1,9 +1,9 @@
 import './WhereToWatch.scss';
-import { useGetMoviesWatchProvidersQuery } from '../../../api/api';
+import { useGetWatchProvidersQuery } from '../../../api/api';
 import ProvidersList from '../../molecules/ProvidersList/ProvidersList';
 
-function WhereToWatch({id}) {
-    const { data, error, isLoading, isFetching, isSuccess } = useGetMoviesWatchProvidersQuery(id);
+function WhereToWatch({id, type}) {
+    const { data, error, isLoading, isFetching, isSuccess } = useGetWatchProvidersQuery({id, type});
 
     let rentList, streamList, buyList;
 

@@ -1,7 +1,7 @@
-import { useGetMovieCreditsQuery } from '../../../api/api';
+import { useGetCreditsQuery } from '../../../api/api';
 
-function CastAndCrew({type, id, }) {
-    const { data:credits, error, isLoading, isFetching, isSuccess } = useGetMovieCreditsQuery(id);
+function CastAndCrew({type, id}) {
+    const { data:credits, error, isLoading, isFetching, isSuccess } = useGetCreditsQuery({id,type});
     let directorsList, producersList, mainActorsList = [];
     console.log("credits", credits);
 
