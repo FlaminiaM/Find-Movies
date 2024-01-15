@@ -1,0 +1,16 @@
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.homepage{
+	padding-left: toRem(16);
+	max-width: 1300px;
+    margin: 0 auto;
+	
+	@include mdMinBreakPoint{
+		padding-left: toRem(80);
+	}
+
+	@include xlMinBreakPoint{
+		padding-left: toRem(120);
+	}
+}

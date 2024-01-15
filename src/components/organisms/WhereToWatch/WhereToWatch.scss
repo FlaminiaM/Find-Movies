@@ -2,14 +2,11 @@
 @import '../../../globalStyles/functions';
 @import '../../../globalStyles/mixins';
 
-.top-rated-section{
-    margin-top: toRem(32);
 
+.watch-providers{
+    margin-top: toRem(24);
+    text-align: center;
     @include mdMinBreakPoint{
-        margin-top: toRem(60);
-    }
-    h1{
-        color: $yellow;
-        font-size: toRem(32);
+        text-align: left;
     }
 }

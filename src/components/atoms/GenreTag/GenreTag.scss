@@ -1,0 +1,15 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.genre-tag{
+    font-size: toRem(14);
+    color: $gray100;
+    padding: toRem(10);
+    background-color: $gray100opacity16;
+    border: 1px solid $gray100opacity16;
+    border-radius: toRem(50);
+    min-width: toRem(60);
+    text-align: center;
+    margin: 0 toRem(5);
+}
