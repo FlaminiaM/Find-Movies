@@ -37,6 +37,9 @@ function Swiper({ moviesData, name, type }) {
                 1200: {
                     slidesPerView: 6.2,
                 },
+                1650: {
+                    slidesPerView: 8.2,
+                },
 
             },
             navigation: {
