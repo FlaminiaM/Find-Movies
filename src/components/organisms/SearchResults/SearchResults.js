@@ -7,7 +7,7 @@ import Loader from '../../atoms/Loader/Loader';
 import SearchResult from '../../molecules/SearchResult/SearchResult';
 
 
-function SearchResults({ searchTerm, maxResultsNumber }) {
+function SearchResults({ searchTerm, maxResultsNumber, searchResultClickHandler }) {
     const [filteredSearchTerm, setFilteredSearchTerm] = useState(searchTerm);
     console.log("in search results", searchTerm)
     const { data, error, isLoading, isFetching } = useSearchMultiQuery(
@@ -47,7 +47,7 @@ function SearchResults({ searchTerm, maxResultsNumber }) {
                 ? <Loader />
                 : (error
                     ? <p>There was an error please try again</p>
-                    : results.slice(0, maxResultsNumber).map((result, i) => <SearchResult key={result.id} id={result.id} title={result.media_type === "tv" ? result.name : result.title} posterPath={result.poster_path} firstAirDate={result.media_type === "tv" ? result.first_air_date : result.release_date} mediaType={result.media_type} />))}
+                    : results.slice(0, maxResultsNumber).map((result, i) => <SearchResult key={result.id} id={result.id} title={result.media_type === "tv" ? result.name : result.title} posterPath={result.poster_path} firstAirDate={result.media_type === "tv" ? result.first_air_date : result.release_date} mediaType={result.media_type} searchResultClickHandler={searchResultClickHandler} />))}
         </div>
     )
 }
