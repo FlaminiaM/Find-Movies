@@ -3,7 +3,6 @@ import { register } from 'swiper/element/bundle';
 
 import './Swiper.scss';
 
-import movieImage from '../../../assets/images/movie-image.png'
 import MoviePreview from '../../molecules/MoviePreview/MoviePreview';
 import Icon from '../../atoms/Icon/Icon';
 
@@ -17,7 +16,6 @@ function Swiper({ moviesData, name, type }) {
         // Object with parameters
         const params = {
             // slidesPerView: 5,
-            navigation: true,
             breakpoints: {
                 0: {
                     slidesPerView: 1.5,
@@ -52,7 +50,7 @@ function Swiper({ moviesData, name, type }) {
 
         // initialize swiper
         swiperRef.current.initialize();
-    }, []);
+    });
 
 
     return (

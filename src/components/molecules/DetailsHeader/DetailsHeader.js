@@ -3,8 +3,6 @@ import './DetailsHeader.scss';
 import star from '../../../assets/icons/star.svg';
 
 function DetailsHeader({ type, title, releaseDate, length, rating, totalNumberRatings }) {
-    console.log("in header type is", type)
-    console.log("in header title is", title)
     function toHoursAndMinutes(totalMinutes) {
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;

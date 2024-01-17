@@ -1,8 +1,9 @@
 import './DetailsPage.scss';
 import { useParams } from "react-router-dom";
-import Skeleton from 'react-loading-skeleton';
 
 import quote from '../../../assets/images/quote.svg';
+
+import Error from '../../organisms/Error/Error';
 
 import { useGetDetailsQuery } from '../../../api/api';
 
@@ -16,14 +17,14 @@ import DetailsContainerSkeleton from '../../organisms/DetailsContainerSkeleton/D
 
 function DetailsPage({type}) {
     const { id } = useParams();
-    const { data, error, isLoading, isFetching, isSuccess } = useGetDetailsQuery({type, id});
+    const { data, error, isLoading, isFetching } = useGetDetailsQuery({type, id});
 
-    if(isLoading){
+    if(isLoading || isFetching){
         return <div><DetailsHeaderSkeleton /><DetailsContainerSkeleton /></div>
     }
 
     if (error) {
-        return <h1>Error</h1>
+        return <Error />
     }
     return (
         <>
@@ -42,9 +43,9 @@ function DetailsPage({type}) {
                 <div className='details-info'>
                     {
                         data.tagline.length > 0 && <p className='details-info__tagline'>
-                            <img className='open-quote' src={quote} />
+                            <img className='open-quote' src={quote} alt='open quote' />
                             {data.tagline}
-                            <img className='close-quote' src={quote} />
+                            <img className='close-quote' src={quote} alt='close quote' />
                         </p>
                     }
                     <GenreTagsList genres={data.genres} />
