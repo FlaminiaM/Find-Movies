@@ -40,7 +40,6 @@ function Swiper({ moviesData, name, type }) {
                 1650: {
                     slidesPerView: 8.2,
                 },
-
             },
             navigation: {
                 nextEl: `#swiper-${name} .swiper-navigation__next`,

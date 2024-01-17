@@ -5,6 +5,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Header from './components/organisms/Header/Header';
 import Homepage from './components/pages/Homepage/Homepage';
 import DetailsPage from './components/pages/DetailsPage/DetailsPage';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 function App() {
   return (

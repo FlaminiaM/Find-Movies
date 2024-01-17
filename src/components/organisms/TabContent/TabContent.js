@@ -1,20 +1,39 @@
-import Loader from '../../atoms/Loader/Loader';
 import Swiper from '../Swiper/Swiper';
+import MoviePreviewSkeleton from '../../molecules/MoviePreviewSkeleton/MoviePreviewSkeleton';
+import './TabContent.scss';
 
 function TabContent({ type, apiQuery, name }) {
     const { data, error, isLoading, isFetching, isSuccess } = apiQuery(type);
-    console.log(data)
-    let content;
+    
+    let numberOfSkeletonCards;
+    const innerWidth = window.innerWidth;
+    switch(true) {
+        case innerWidth < 660:
+            numberOfSkeletonCards = 1;
+          break;
+        case innerWidth >= 660 && innerWidth < 768:
+            numberOfSkeletonCards = 3;
+          break;
+        case innerWidth >= 768 && innerWidth < 1020:
+            numberOfSkeletonCards = 5;
+          break;
+        case innerWidth >= 1020 && innerWidth < 1650:
+            numberOfSkeletonCards = 6;
+          break;
+        default:
+            numberOfSkeletonCards = 8;
+      }
+
     if (isLoading) {
-        content = <Loader />
-    } else if (isSuccess) {
-        console.log("success");
-        content = <Swiper moviesData={data.results} name={name} type={type} />
-    } else if (error) {
-        content = <h1>Error</h1>
+        return <div className='movie-preview-skeletons'><MoviePreviewSkeleton cards={numberOfSkeletonCards}/></div>
+    }  
+    
+    if (error) {
+        <h1>Error</h1>
     }
+
     return (
-        content
+        <Swiper moviesData={data.results} name={name} type={type} />
     )
 }
 

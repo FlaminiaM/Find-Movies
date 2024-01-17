@@ -19,6 +19,10 @@
             flex-direction: row;
             align-items: center;
         }
+
+        &__date-year{
+            display: flex;
+        }
     }
 
     &__info-container{
@@ -34,7 +38,7 @@
             color: $yellow;
         }
     
-        h1{
+        &__title{
             font-size: toRem(24);
             margin: toRem(24) 0;
             letter-spacing: normal;
@@ -47,7 +51,8 @@
                 text-align: left;
             }
         }
-        span{
+
+        &__length, &__year{
             font-size: toRem(14);
             margin-right: toRem(15);
         }
@@ -74,8 +79,9 @@
 
         &-star{
             margin-right: toRem(20);
-            img{
+            &-img{
                 height: toRem(32);
+                margin-right: 8px;
                 @include mdMinBreakPoint{
                     height: toRem(48);
                 }
