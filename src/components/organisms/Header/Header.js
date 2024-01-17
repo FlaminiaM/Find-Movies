@@ -1,15 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState} from 'react';
 import './Header.scss';
 
 import useDebounce from '../../../customHook/useDebounce';
 
 import Logo from '../../atoms/Logo/Logo';
-import Icon from '../../atoms/Icon/Icon';
 import Input from '../../atoms/Input/Input';
 import searchIcon from '../../../assets/icons/search.svg';
 import SearchResults from '../SearchResults/SearchResults';
 
-function Header({ }) {
+function Header() {
     const [searchText, setSearchText] = useState("");
     const debouncedSearchTerm = useDebounce(searchText, 500);
 
