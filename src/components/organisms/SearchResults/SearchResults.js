@@ -29,18 +29,6 @@ function SearchResults({ searchTerm, maxResultsNumber, searchResultClickHandler 
         return <div className="text-hint">Error while fetching books</div>;
     }
 
-    if (isLoading) {
-        return <div className="text-hint">Loading books...</div>;
-    }
-
-    if (isFetching) {
-        return <div className="text-hint">Fetching books...</div>;
-    }
-
-    if (results.length === 0) {
-        return <div className="text-hint">No books found</div>;
-    }
-
     return (
         <div className={(isLoading || isFetching) ? `search-results search-results--loading` : `search-results`}>
             {isLoading || isFetching
