@@ -1,5 +1,6 @@
 import './DetailsPage.scss';
 import { useParams } from "react-router-dom";
+import Skeleton from 'react-loading-skeleton';
 
 import quote from '../../../assets/images/quote.svg';
 
@@ -10,12 +11,15 @@ import GenreTagsList from '../../molecules/GenreTagsList/GenreTagsList';
 import CastAndCrew from '../../organisms/CastAndCrew/CastAndCrew';
 import WhereToWatch from '../../organisms/WhereToWatch/WhereToWatch';
 
+import DetailsHeaderSkeleton from '../../molecules/DetailsHeaderSkeleton/DetailsHeaderSkeleton';
+import DetailsContainerSkeleton from '../../organisms/DetailsContainerSkeleton/DetailsContainerSkeleton';
+
 function DetailsPage({type}) {
     const { id } = useParams();
     const { data, error, isLoading, isFetching, isSuccess } = useGetDetailsQuery({type, id});
 
-    if (isLoading || isFetching) {
-        return <p>Loading</p>
+    if(isLoading){
+        return <div><DetailsHeaderSkeleton /><DetailsContainerSkeleton /></div>
     }
 
     if (error) {

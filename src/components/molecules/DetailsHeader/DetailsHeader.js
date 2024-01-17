@@ -15,9 +15,9 @@ function DetailsHeader({ type, title, releaseDate, length, rating, totalNumberRa
 
     if (type === 'movie') {
         const lengthInHoursMinutes = toHoursAndMinutes(length);
-        lengthUi = <span>{lengthInHoursMinutes.hours}h {lengthInHoursMinutes.minutes}m</span>
+        lengthUi = <span className='details-header__info-container__length'>{lengthInHoursMinutes.hours}h {lengthInHoursMinutes.minutes}m</span>
     } else {
-        lengthUi = <span>{length} seasons</span>
+        lengthUi = <span className='details-header__info-container__length'>{length} seasons</span>
     }
 
     return (
@@ -25,15 +25,15 @@ function DetailsHeader({ type, title, releaseDate, length, rating, totalNumberRa
             <div className='details-header-inner container'>
                 <div className='details-header__info-container'>
                     <p className='type'>{type.toUpperCase()}</p>
-                    <h1>{title.toUpperCase()}</h1>
+                    <h1 className='details-header__info-container__title'>{title.toUpperCase()}</h1>
                     <div className='details-header-inner__date-year'>
-                        <span>{new Date(releaseDate).getFullYear()}</span>
+                        <span className='details-header__info-container__year'>{new Date(releaseDate).getFullYear()}</span>
                         {lengthUi}
                     </div>
                 </div>
                 <div className='details-header__rating-container'>
                     <div className='details-header__rating-star'>
-                        <img src={star} alt='rating star' />
+                        <img className='details-header__rating-star-img' src={star} alt='rating star' />
                         <span className='rating-average'>{rating.toFixed(1)}</span>
                     </div>
                     <div className='details-header__rating-tot'>
