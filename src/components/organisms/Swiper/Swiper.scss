@@ -1,24 +1,32 @@
 @import '../../../globalStyles/variables';
 @import '../../../globalStyles/functions';
-
+@import '../../../globalStyles/mixins';
 .swiper{
     &-wrapper{
         position: relative;
+
+        .swiper-button-disabled{
+            opacity: 0;
+        }
     }
     &-navigation{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         z-index: 1;
-        width: 100vw;
+        // width: calc(100vw - 32px);
+        // @include mdMinBreakPoint{
+        //     width: calc(100vw - 140px);
+        // }
 
         &__next{
             background-color: $gray100opacity16;
             cursor: pointer;
             border-radius: toRem(8);
+            right: 0;
         }
 
         &__prev{
@@ -29,10 +37,6 @@
                 transform: rotate(180deg);
 
             }
-        }
-
-        .swiper-button-disabled{
-            opacity: 0;
         }
     }
 }

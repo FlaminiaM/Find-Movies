@@ -1,0 +1,15 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.top-rated-section{
+    margin-top: toRem(32);
+
+    @include mdMinBreakPoint{
+        margin-top: toRem(60);
+    }
+    h1{
+        color: $yellow;
+        font-size: toRem(32);
+    }
+}

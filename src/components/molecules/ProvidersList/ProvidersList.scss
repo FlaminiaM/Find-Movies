@@ -1,0 +1,25 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+
+.providers-list{
+    &-container{
+        margin-top: toRem(16);
+        margin-bottom: toRem(16);
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mdMinBreakPoint{
+        justify-content: flex-start;
+    }
+
+    &__label{
+        color: $yellow600;
+        padding: toRem(10) 0;
+        font-weight: bold;
+        font-size: toRem(20);
+    }
+
+}

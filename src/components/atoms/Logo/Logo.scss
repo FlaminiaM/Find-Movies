@@ -1,0 +1,14 @@
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $white;
+
+    span{
+        font-size: toRem(24);
+        margin-left: toRem(8);
+    }
+}

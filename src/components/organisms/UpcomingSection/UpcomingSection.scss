@@ -1,0 +1,12 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.upcoming-section{
+    margin-top: toRem(100);
+    h1{
+        color: $yellow;
+        font-size: toRem(32);
+        margin-bottom: toRem(32);
+    }
+}

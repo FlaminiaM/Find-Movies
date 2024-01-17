@@ -1,0 +1,18 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.tabs{
+    margin-bottom: toRem(24);
+    border-bottom: 1px solid white;
+    display: flex;
+    &-container{
+        margin: toRem(24) 0;
+
+        &__show-completed{
+            .button:hover{
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.search-results{
+    background-color: $gray900;
+    position: absolute;
+    height: fit-content;
+    max-height: toRem(535);
+    width: 100%;
+    top: 50px;
+    z-index: 2;
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    border-radius: toRem(4);
+    
+    &--loading{
+        height: toRem(267);
+        align-items: center;
+        justify-content: center;
+    }
+
+}

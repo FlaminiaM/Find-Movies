@@ -1,0 +1,27 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+.provider{
+    max-width: toRem(60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: toRem(16);
+
+    &__image{
+        height: toRem(60); 
+        background-repeat: no-repeat;
+        width: toRem(60);
+        background-size: contain;
+        border-radius: toRem(8);
+        background-position: center;
+    }
+    &__name{
+        font-size: toRem(13);
+        color: $gray100opacity60;
+        margin-top: toRem(8);
+    }
+
+}

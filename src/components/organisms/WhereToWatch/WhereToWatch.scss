@@ -1,0 +1,12 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+
+.watch-providers{
+    margin-top: toRem(24);
+    text-align: center;
+    @include mdMinBreakPoint{
+        text-align: left;
+    }
+}

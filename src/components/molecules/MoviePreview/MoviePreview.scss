@@ -6,9 +6,23 @@
     max-width: 171px;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
+    color: $white;
+
+    &__poster{
+        height: toRem(258);
+        width: toRem(171);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
     &__image-container{
         position: relative;
+
+        & > img{
+            width: 100%;
+        }
 
         &:hover{
             box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
@@ -16,7 +30,7 @@
 
         &-overlay{
             width: 100%;
-            height: 100%;
+            height: toRem(258);
             position: absolute;
             top: 0;
             background-color: $blackopacity24;
@@ -32,5 +46,6 @@
     &__title{
         line-height: toRem(22);
         margin-top: toRem(8);
+        color: $white;
     }
 }
