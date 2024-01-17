@@ -1,9 +1,10 @@
 import Swiper from '../Swiper/Swiper';
 import MoviePreviewSkeleton from '../../molecules/MoviePreviewSkeleton/MoviePreviewSkeleton';
+import Error from '../Error/Error';
 import './TabContent.scss';
 
 function TabContent({ type, apiQuery, name }) {
-    const { data, error, isLoading, isFetching, isSuccess } = apiQuery(type);
+    const { data, error, isLoading, isFetching } = apiQuery(type);
     
     let numberOfSkeletonCards;
     const innerWidth = window.innerWidth;
@@ -24,12 +25,12 @@ function TabContent({ type, apiQuery, name }) {
             numberOfSkeletonCards = 8;
       }
 
-    if (isLoading) {
+    if (isLoading || isFetching) {
         return <div className='movie-preview-skeletons'><MoviePreviewSkeleton cards={numberOfSkeletonCards}/></div>
     }  
-    
+
     if (error) {
-        <h1>Error</h1>
+      return <Error />
     }
 
     return (

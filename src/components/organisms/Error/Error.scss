@@ -1,0 +1,23 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/functions';
+@import '../../../globalStyles/mixins';
+
+
+.error-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font-size: toRem(32);
+        padding-top: toRem(32);
+        padding-bottom: toRem(32);
+    }
+
+    .button{
+        margin-top: toRem(32);
+    }
+}

@@ -1,6 +1,6 @@
 import './App.scss';
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/organisms/Header/Header';
 import Homepage from './components/pages/Homepage/Homepage';
@@ -19,4 +19,6 @@ function App() {
     </div>
   )
 }
-export default App;
+
+
+export default App

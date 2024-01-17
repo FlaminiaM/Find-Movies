@@ -1,6 +1,7 @@
 import './WhereToWatch.scss';
 import { useGetWatchProvidersQuery } from '../../../api/api';
 import ProvidersList from '../../molecules/ProvidersList/ProvidersList';
+import Error from '../Error/Error';
 
 function WhereToWatch({id, type}) {
     const { data, error, isLoading, isFetching, isSuccess } = useGetWatchProvidersQuery({id, type});
@@ -12,7 +13,7 @@ function WhereToWatch({id, type}) {
     }
 
     if (error) {
-        return <h1>Error</h1>
+        return <Error />
     }
 
     if(isSuccess){
@@ -22,7 +23,6 @@ function WhereToWatch({id, type}) {
     }
 
     if((streamList === undefined || streamList.length === 0) && (rentList === undefined || rentList?.length === 0)  && (buyList === undefined || buyList?.length === 0)) {
-        console.log("undefined or 0")
         return;
     }
 

@@ -23,7 +23,6 @@ function TabsContainer({ name, apiQuery }) {
     const handleTabClick = (e) => {
         const i = e.target.getAttribute("tab-index");
         const value = e.target.getAttribute('tab-value');
-        console.log('tab value is', value)
         setIndexSelectedTab(parseInt(i));
         setSelectedTab(value);
     }

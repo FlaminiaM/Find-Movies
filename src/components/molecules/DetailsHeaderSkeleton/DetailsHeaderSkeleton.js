@@ -1,7 +1,7 @@
 import Skeleton from 'react-loading-skeleton';
 import './DetailsHeaderSkeleton.scss';
 
-function DetailsHeaderSkeleton({cards}) {
+function DetailsHeaderSkeleton() {
     return (
         <div className='details-header details-header--skeleton'>
             <div className='details-header-inner container'>
@@ -29,10 +29,3 @@ function DetailsHeaderSkeleton({cards}) {
 }
 
 export default DetailsHeaderSkeleton;
-
-{/* <div className='header-skeleton container' >
-<Skeleton width={171} height={258}/>
-<div className='header__search' >
-<Skeleton width={171} height={258}/>
-</div>
-</div> */}

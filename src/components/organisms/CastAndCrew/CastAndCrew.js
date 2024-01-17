@@ -1,16 +1,13 @@
 import { useGetCreditsQuery } from '../../../api/api';
 
-function CastAndCrew({type, id}) {
-    const { data:credits, error, isLoading, isFetching, isSuccess } = useGetCreditsQuery({id,type});
-    let directorsList, producersList, mainActorsList = [];
-    console.log("credits", credits);
+import Error from '../Error/Error';
 
-    if (isLoading || isFetching) {
-        return <p>Loading</p>
-    }
+function CastAndCrew({type, id}) {
+    const { data:credits, error, isSuccess } = useGetCreditsQuery({id,type});
+    let directorsList, producersList, mainActorsList = [];
 
     if (error) {
-        return <h1>Error</h1>
+        return <Error />
     }
 
     if (isSuccess) {
