@@ -1,5 +1,18 @@
 @import './globalStyles/global.scss';
 
 .App{
-
+    .footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+        padding-top: 24px;
+        margin-bottom: 16px;
+        border-top: 1px solid $gray100opacity16;
+        img{
+            max-width: 150px;
+            margin-right: 10px;
+        }
+    }
 }
